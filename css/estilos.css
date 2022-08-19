@@ -1,0 +1,750 @@
+/* eliminadno formatos por defecto */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+}
+
+body{
+    margin: 30px;
+    background-color: black;
+}
+
+/* etiqueta padre cabeza pagina 1 */
+.cabeza{
+    border: 3px solid rgb(199, 199, 199);
+    display: grid;
+    gap:15px;
+    width: 100%;
+    height: 80vh;
+     grid-template-columns:repeat(8, 0.5fr);
+     grid-template-rows: 1fr 1fr 0.2fr;
+     grid-template-areas:
+     "na i11 i11 i12 i12 i13 i13 nu"
+     "ne ne ti ti ti ti ni ni"
+     "v v men men men men va va";
+     background-color: rgba(34, 27, 17, 0.432);
+
+}
+
+/* imagenes cabeza de pagina */
+
+.imagen1{ 
+    width: 400px;
+    height: 300px;
+    padding-top: 10px;
+    opacity: 0.7;
+}
+
+/* clase unica de cada imagen de cabeza de pagina */
+
+.img11{
+    grid-area: i11;
+
+
+}
+.img12{
+    grid-area: i12;
+
+}
+.img13{
+    grid-area: i13;
+}
+
+/* caja padre del titulo pagina 1 */
+.titulo{
+    
+    grid-area: ti ;
+    border:2px solid rgb(207, 207, 207);
+    background-color: rgba(26, 25, 25, 0.87);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* titulo principal  */
+h1{
+    font-size: 90px;
+    font-family: 'Times New Roman', Times, serif;
+    color: rgb(126, 125, 123);
+}
+
+/* asignando grid area a menu navegador horizontal principal  */
+
+.menuHorizontal{
+    
+    grid-area: men ;
+}
+
+/* apliccando flex al menu horizontal para centar */
+.navegador{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* formato lista del menu principal  */
+ li a{
+    text-decoration: none;
+    list-style: none;
+    padding: 35px;
+    font-size: 30px;
+    color: bisque;
+
+}
+
+
+/* video presentacion  */
+.video_presentacion{
+    background-color: rgba(100, 104, 104, 0.062);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 4px solid grey;
+    margin-top: 15px;
+
+}
+/* caja de los elementos principales  */
+.principal{
+    border: 3px solid rgb(199, 199, 199);
+    display: grid;
+    width: 100%;
+    height: 550px;
+     grid-template-columns:repeat(10, 1fr);
+     grid-template-rows: 4fr 4fr 1fr;
+     grid-template-areas:
+     "a menuV menuV b textoP textoP d imagenP imagenP c"
+     "a menuV menuV b textoP textoP d imagenP imagenP c"
+     " z z z z z z z z z z";
+     background-color: rgba(34, 27, 17, 0.432);
+     margin-top: 15px;
+
+}
+
+.menuVertical{
+    border: 3px solid grey;
+    grid-area: menuV;
+
+}
+/* 
+formato menu vertical */
+.sider li a{
+
+    text-decoration: none;
+    list-style: none;
+    padding: 35px;
+    font-size: 30px;
+    color: bisque;
+
+}
+
+      
+.textoPrincipal{
+    border: 3px solid grey;
+    grid-area: textoP;
+    color: azure ;
+    padding-top: 25px ;
+    justify-content: center;
+    display: inline-block;
+
+}
+p{
+    padding-top: 15px;
+}
+
+.textoPrincipal h3 p{
+    padding-top: 15px;
+}
+
+
+/* 4 imagenes principales  */
+.imagenPrincipal{
+    
+    
+    grid-area: imagenP;
+    display: grid;
+    gap: 10px;
+    grid-template-columns:1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+    "img1 img1 img2 img2"
+    "img1 img1 img2 img2"
+    "img3 img3 img4 img4"
+    "img3 img3 img4 img4"
+    
+    ;
+
+    
+    }
+
+
+    /* aplicando area grid y centrado con flex a las 4 imagernes */
+
+    .imgP1{
+        grid-area: img1;
+        
+        border: 3px solid rgb(227, 228, 226);
+        display: flex;
+        justify-content: center;
+        align-items: center;     
+    }
+    .imgP2{
+        grid-area: img2;
+        border: 3px solid rgb(227, 228, 226); 
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .imgP3{
+        grid-area: img3;
+        border: 3px solid rgb(227, 228, 226); 
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .imgP4{
+        grid-area: img4;
+        border: 3px solid rgb(227, 228, 226); 
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+/* clase del pie de pagina */
+.nada{
+    border: 3px solid grey;
+    grid-area: z ;
+    margin-top: 10px;
+
+}
+
+small{
+    color: bisque;
+}
+
+
+
+
+/* Pagina 2 inscribete */
+
+
+    .cabeza2{
+        border: 3px solid rgb(199, 199, 199);
+        display: grid;
+        width: 100%;
+        height: 280px;
+         grid-template-columns:repeat(8, 1fr);
+         grid-template-rows:  2fr 1f;
+         grid-template-areas:
+         
+         "ne ne ti ti ti ti ni ni"
+         "v v men men men men va va";
+         background-color: rgba(68, 66, 66, 0.603);
+    
+    }
+
+    /* navegador horizontal paginas 2,3,4 y 5 */
+    .navegador2{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 30px;
+        
+        background-color: black;
+    }
+
+    .menuHorizontal2{
+        grid-area: men;
+    
+        
+    }
+    nav{
+        background-color: black;
+        
+    }
+
+    /* titulos pagina 2,3,4 y 5 */
+    .titulo2{
+        grid-area: ti;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border:2px solid rgb(207, 207, 207);
+        background-color: rgba(26, 25, 25, 0.87);
+        margin-top: 18px;
+
+    }
+    h2{
+        font-size: 70px;
+        font-family: 'Times New Roman', Times, serif;
+        color: rgb(126, 125, 123);
+    }
+    
+    h3{
+        color: antiquewhite;
+        font-size: 25px;
+        opacity: 0.6;
+    }
+
+    .parrafo p{
+        color: bisque;
+    }
+
+    .imagenInscribete{
+        color: aliceblue;
+    }
+
+    .imgInscripcion{
+
+        border: 3px solid rgb(199, 199, 199);
+        display: grid;
+        width: 100%;
+        height: 500px;
+         grid-template-columns:repeat(8, 1fr);
+         grid-template-rows:  1fr 1fr ;
+         grid-template-areas:
+         
+         "espacio t1 t1  t2 t2  t3 t3 nada"
+         "espacio t1 t1  t2 t2  t3 t3 nada";
+         background-color: rgba(68, 66, 66, 0.603);
+         gap:10px;
+         padding-top: 35px;
+         
+    
+    }
+
+    /* tarjetas informativas pagina inscripcion */
+
+    .tarjeta1{
+        color: aliceblue;
+        border: 3px solid rgb(199, 199, 199);
+        grid-area: t1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 39vh;
+        width: 100%;
+        margin-top: 9px;
+        
+    }
+
+    .tarjeta2{
+        color: aliceblue;
+        border: 3px solid rgb(199, 199, 199);
+        grid-area: t2;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 39vh;
+        width: 100%;
+        margin-top: 9px;
+    }
+
+    .tarjeta3{
+        color: aliceblue;
+        border: 3px solid rgb(199, 199, 199);
+        grid-area: t3;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 39vh;
+        width: 100%;
+        margin-top: 9px;
+    }
+
+    .tablaHorarios{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+    }
+    table{
+        color: antiquewhite;
+        size: 300px;
+    }
+
+
+/* PAGINA3 */
+
+.subtitulo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 0 20px 20px;
+    
+
+    }
+
+.galeriaFotos{
+    padding-left: 60px;
+    padding-right: 60px;
+}
+
+/* pagina4 */
+
+.nosotros{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding-left: 40px;
+    padding-right: 40pxs;
+}
+
+.parrafoConocenos{
+    color: bisque;
+    
+}
+
+
+/* pagina5 */
+
+.rutinas{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+    
+
+/*    
+media */
+
+@media screen and (max-width: 1650px)
+{
+    /* pagina 1 */
+    .imagen1{
+        width: 300px;
+        height: 50vh;
+    }
+
+    .imgP1{
+        
+        
+        border: none;
+
+           
+    }
+    .imgP2{
+        
+        border: none;
+    }
+    .imgP3{
+        
+        border:none ; 
+
+      
+    }
+    .imgP4{
+        
+        border: none;
+        
+        
+    /* pagina 2 */
+
+       
+    }
+}
+
+@media screen and (max-width: 1400px)
+{
+
+    .imagen1{
+        width: 250px;
+        height: 30vh;
+    }
+
+    .titulo{
+    
+          width: 100%;
+         height: 10vh;
+            
+        }
+
+    .cabeza{
+        width: 100%;
+        height: 50vh;
+    }
+    h1{
+            font-size: 65px;
+            
+        }
+
+        li a{
+            
+            padding: 25px;
+            font-size: 20px;
+        
+        }
+
+        .sider li a{
+
+            padding: 25px;
+            font-size: 20px;
+
+        }
+
+        .imagenPrincipal{
+
+            width: 70%;
+           height: 40vh;
+        }
+
+        .imagenCentro{
+            width: 150px;
+            height: 110px;
+        }
+
+        /* pagina 2 */
+
+        .imag2{
+            width: 140px;
+            height: 130px;
+        }
+        .imag3{
+            width: 140px;
+            height: 130px;
+        }
+        .imag{
+            width: 120px;
+            height: 110px;
+        }
+
+        .imgInscripcion p{
+            font-size: 15px;
+        }
+        .tarjeta1 .tarjeta2.tarjeta3{
+            width: 25px;
+        }
+
+
+    
+}
+
+@media screen and (max-width: 1025px)
+
+{
+
+    .imagen1{
+        width: 150px;
+        height: 20vh;
+    }
+
+    h1{
+        font-size: 45px;
+        
+    }
+
+    .cabeza{
+        width: 100%;
+        height: 40vh;
+    }
+
+    .sider li a{
+
+        padding: 15px;
+        font-size: 14px;
+
+    }
+    .textoPrincipal p{
+
+        font-size: 13px;
+
+    }
+
+    .imagenPrincipal{
+        display: flex;
+        flex-direction: column;
+
+        
+    }
+    .imagenCentro{
+        width: 120px;
+        height: 120px;
+        margin-top: 7px;
+    }
+
+    /* pagina2 */
+
+    h2{
+        font-size: 50px;
+    }
+
+     li a{
+        font-size: 15px;
+    }
+
+
+    /* pagina 4 */
+
+    .nosotros{
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+
+
+
+}
+
+@media screen and (max-width: 768px){
+    .imagen1{
+        width: 120px;
+        height: 10vh;
+    }
+
+    .cabeza{
+        width: 100%;
+        height: 30vh;
+        
+    }
+
+    .titulo{
+        width: 320px;
+    }
+
+    h1{
+        font-size: 35px;
+        
+    }
+
+    li a{
+        
+        padding: 15px;
+        font-size: 12px;
+    
+    }
+
+    .sider li a{
+
+        padding: 25px;
+        font-size: 20px;
+
+    }
+
+    .principal{
+        width: 100%;
+        height: 100vh;
+        display: grid;
+        grid-template-columns:1fr;
+     grid-template-rows: 1fr 2fr 3fr;
+     grid-template-areas:
+     "menu"
+     "parrafo"
+     "imagenes";
+
+    }
+    .menuVertical{
+        grid-area: menu;
+        display: flex;
+        
+    }
+
+    .textoPrincipal{
+        grid-area: parrafo;
+    }
+
+    .imagenPrincipal{
+        grid-area: imagenes;
+        display: flex;
+        flex-flow: wrap;
+        align-items: center;
+        justify-content: center;
+    }
+
+    /* pagina 2 */
+
+    .imgInscripcion{
+        display: flex;
+        flex-flow: column;
+        width: 100%;
+        height: 100vh;
+    }
+
+    table{
+        font-size: 12px;
+    }
+
+    /* pagina 4 */
+
+    .nosotros{
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+}
+
+@media screen and (max-width: 480px){
+
+    *{
+        margin: 0;
+        border: none;
+        margin: 0;
+    }
+
+    .imagen1{
+        width: 80px;
+        height: 5vh;
+    }
+
+    .cabeza{
+        width: 100%;
+        height: 20vh;
+        border: none;
+    }
+
+    .titulo{
+        width: 170px;
+    }
+
+    h1{
+        font-size: 20px;
+        
+    }
+
+    li a{
+        
+        padding: 5px;
+        font-size: 12px;
+    
+    }
+
+    .sider li a{
+
+        padding: 25px;
+        font-size: 20px;
+
+    }
+
+    /* pagina 2 */
+
+    .cabeza2{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+    }
+
+    .titulo2{
+        background-color: none;
+    }
+
+    .nosotros{
+        padding-left: 4px;
+        padding-right: 4px;
+    }
+
+
+}
+    
+
+
+
